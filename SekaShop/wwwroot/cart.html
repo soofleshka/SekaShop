@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SekaShop</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6250a18750.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__icon-bar">
+        <div class="container">
+          <div class="row py-4">
+            <div class="col-1 col-sm-4 col-md-3 align-self-center">
+              <a href="tel:+" class="btn header__phone-contact"
+                ><i class="fas fa-mobile-alt"></i
+                ><span class="d-none d-sm-inline-block">
+                  +375(00)666-66-66</span
+                ></a
+              >
+            </div>
+            <div class="col-11 col-sm-8 col-md-9 text-end">
+              <form action="" class="search-bar">
+                <input type="search" name="search" pattern=".*\S.*" required />
+                <button class="search-btn" type="submit">
+                  <span>Search</span>
+                </button>
+              </form>
+              <!-- <button class="btn header__icon d-none d-sm-inline-block">
+                <i class="fas fa-search"></i>
+              </button> -->
+              <a href="cart.html" class="btn header__icon">
+                <i class="fas fa-shopping-cart"></i
+                ><span class="header__icon-count">0</span>
+              </a>
+              <a href="likedProducts.html" class="btn header__icon">
+                <i class="far fa-heart"></i
+                ><span class="header__icon-count liked-icon-count">0</span>
+              </a>
+
+              <div class="dropdown dropdown-menu-end d-inline-block">
+                <button
+                  class="btn header__icon"
+                  type="button"
+                  id="authorization-dropdown"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="far fa-user"></i
+                  ><span class="header__icon-dropdown"
+                    ><i class="fas fa-sort-down"></i
+                  ></span>
+                </button>
+                <ul
+                  class="dropdown-menu authorization-menu"
+                  aria-labelledby="authorization-dropdown"
+                >
+                  <li>
+                    <a class="dropdown-item" href="authentication.html?register"
+                      >Регистрация</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="authentication.html?login"
+                      >Авторизация</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light py-4 g-0">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">SekaShop</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Секс-игрушки
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li>
+                      <a class="dropdown-item" href="catalog.html?categoryId=1"
+                        >Dildos</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="catalog.html?categoryId=2"
+                        >Vibrators</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="catalog.html?categoryId=3"
+                        >Vaginas</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="catalog.html?categoryId=4"
+                        >Anal toys</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#"
+                    >Эротическое бельё</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Смазки</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section class="cart empty-section">
+      <div class="container">
+        <h2 class="cart__title py-4">Ваша корзина</h2>
+        <ul class="cart-list"></ul>
+        <div class="cart-total my-4 text-end">
+          <span class="cart-totat__tilte h3"></span>
+          <span class="cart-total__cost h2"></span>
+        </div>
+        <div class="cart-butttons my-4 text-end">
+          <a href="index.html" class="btn btn-light cart-butttons__button">
+            Продолжить покупки
+          </a>
+          <a
+            href=""
+            class="btn btn-primary cart-butttons__button purchase-button"
+          >
+            Оформить заказ
+          </a>
+        </div>
+      </div>
+    </section>
+    <footer class="footer pt-5">
+      <div class="container">
+        <div class="row gy-3">
+          <div class="col-md-3 col-6">
+            <p class="footer__title">Информация</p>
+            <ul class="footer__navbar">
+              <li class="footer__navbar-item">
+                <a href="" class="footer__navbar-link">Главная</a>
+              </li>
+              <li class="footer__navbar-item">
+                <a href="" class="footer__navbar-link">О нас</a>
+              </li>
+              <li class="footer__navbar-item">
+                <a href="" class="footer__navbar-link">Информация о доставке</a>
+              </li>
+              <li class="footer__navbar-item">
+                <a href="" class="footer__navbar-link">Политика безопасности</a>
+              </li>
+              <li class="footer__navbar-item">
+                <a href="" class="footer__navbar-link">Связаться с нами</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-6">
+            <p class="footer__title">Время работы</p>
+            <p class="footer__work-time">
+              г. Минск, у черта на куличках <br />
+              пн-вс: 10:00-20:00 <br />
+              без перерыва
+            </p>
+          </div>
+          <div class="col-md-3 col-6">
+            <p class="footer__title">Контакты</p>
+            <ul class="footer__contact">
+              <li class="footer__contact-item">
+                <a href="tel:+" class="footer__contact-link"
+                  >+375 (00) 666-66-66</a
+                >
+              </li>
+              <li class="footer__navbar-item">
+                <a href="tel:+" class="footer__contact-link"
+                  >+375 (00) 666-66-66</a
+                >
+              </li>
+              <li class="footer__navbar-item">
+                <a href="tel:+" ty class="footer__contact-link"
+                  >+375 (00) 666-66-66</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-6">
+            <p class="footer__title">Мы в сети</p>
+            <ul class="footer__social-contact">
+              <li class="footer__social-contact-item">
+                <a href="" class="footer__social-contact-link"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+              <li class="footer__social-contact-item">
+                <a href="" class="footer__social-contact-link"
+                  ><i class="fab fa-telegram-plane"></i
+                ></a>
+              </li>
+              <li class="footer__social-contact-item">
+                <a href="" class="footer__social-contact-link"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row py-3 text-center">
+          <p class="copyright">© 2021 Made for practice 29.05.2021</p>
+        </div>
+      </div>
+    </footer>
+    <script src="bootstrap/popper.min.js"></script>
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <script type="module" src="js/cart.js"></script>
+  </body>
+</html>

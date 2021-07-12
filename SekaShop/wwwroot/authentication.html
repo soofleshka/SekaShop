@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SekaShop</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6250a18750.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container py-5">
+      <div id="errors"></div>
+      <div id="registerForm" class="d-none">
+        <h3>Зарегестрируйтесь на сайте</h3>
+        <label>Введите email</label><br />
+        <input type="email" id="emailRegister" /> <br /><br />
+        <label>Введите пароль</label><br />
+        <input type="password" id="passwordRegister" /><br /><br />
+        <label>Подтвердите пароль</label><br />
+        <input type="password" id="confirmPassword" /><br /><br />
+        <input type="submit" id="submitRegister" value="Register" />
+      </div>
+      <div id="loginForm" class="d-none">
+        <h3>Вход на сайт</h3>
+        <a href="authentication.html?register" class="btn-link">Регистрация</a>
+        <br />
+        <label>Введите email</label><br />
+        <input type="email" id="emailLogin" /> <br /><br />
+        <label>Введите пароль</label><br />
+        <input type="password" id="passwordLogin" /><br /><br />
+        <input type="submit" id="submitLogin" value="Логин" />
+      </div>
+    </div>
+    <script src="js/authentication.js"></script>
+  </body>
+</html>
