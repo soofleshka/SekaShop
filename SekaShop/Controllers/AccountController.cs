@@ -15,9 +15,9 @@ namespace SekaShop.Controllers
     {
         private static ApplicationService _appService;
 
-        public AccountController()
+        public AccountController(ApplicationContext context)
         {
-            _appService = new ApplicationService(new ApplicationContext());
+            _appService = new ApplicationService(context);
         }
 
         [HttpPost]

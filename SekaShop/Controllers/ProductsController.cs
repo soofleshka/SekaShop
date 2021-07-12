@@ -12,9 +12,9 @@ namespace SekaShop
     {
         private static ApplicationService _appService;
 
-        public ProductsController()
+        public ProductsController(ApplicationContext context)
         {
-            _appService = new ApplicationService(new ApplicationContext());
+            _appService = new ApplicationService(context);
         }
 
         [HttpGet]

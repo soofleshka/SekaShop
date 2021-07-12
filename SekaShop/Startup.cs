@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authentication.Cookies;
-
+using Microsoft.EntityFrameworkCore;
 
 namespace SekaShop
 {
@@ -21,7 +21,11 @@ namespace SekaShop
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+                            .AddJsonFile("constrings.json")
+                           .AddConfiguration(configuration);
+            Configuration = builder.Build();
+            
         }
 
         public IConfiguration Configuration { get; }
@@ -29,6 +33,10 @@ namespace SekaShop
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            string connection = Configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContext<ApplicationContext>(options =>
+                options.UseSqlServer(connection));
+
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
             {
                 options.LoginPath = "/Account/Login/";
