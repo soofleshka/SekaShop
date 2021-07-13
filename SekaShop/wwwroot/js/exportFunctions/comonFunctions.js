@@ -26,7 +26,7 @@ export function loadCart() {
   }
 
   let url = '/api/cart/' + cartToken;
-  request.open('GET', url);
+  request.open('GET', url, false);
   request.onload = requestLoad;
   request.send();
 }

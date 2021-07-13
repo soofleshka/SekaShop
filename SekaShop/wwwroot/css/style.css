@@ -1,5 +1,6 @@
 body {
   font-family: 'Roboto', arial, sans-serif;
+  background: #fff;
 }
 .btn-check:focus + .btn,
 .btn:focus {
@@ -88,6 +89,10 @@ ul {
 .header__icon-dropdown {
   position: absolute;
   bottom: 3px;
+}
+
+.authorization-menu {
+  transform: translate(-128px, 28px);
 }
 
 .authorization-menu .dropdown-item {

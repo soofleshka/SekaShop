@@ -18,7 +18,7 @@ function displayLikedProducts(response) {
   if (catalog.length === 0) {
     productsElement.classList.remove('section-title');
     productsElement.innerHTML =
-      "Вы не добавли в понравившиеся ни одного товара <a href='index.html' class='btn btn-primary'>продолжить покупки</a>";
+      "Вы не добавили в понравившиеся ни одного товара <a href='index.html' class='btn btn-primary'>продолжить покупки</a>";
     return;
   }
   productsElement.textContent = 'Понравившиеся товары';
