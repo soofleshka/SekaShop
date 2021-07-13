@@ -30,7 +30,6 @@ namespace SekaShop
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             string connection = Configuration.GetConnectionString("WebConnection");
@@ -42,27 +41,10 @@ namespace SekaShop
                 options.LoginPath = "/Account/Login/";
                 options.LogoutPath = "/Account/Logout/";
             }); 
-            //services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-            //    .AddJwtBearer(options =>
-            //    {
-            //        options.RequireHttpsMetadata = false;
-            //        options.TokenValidationParameters = new TokenValidationParameters
-            //        {
-            //            ValidateIssuer = true,
-            //            ValidIssuer = AuthOptions.ISSUER,
-            //            ValidateAudience = true,
-            //            ValidAudience = AuthOptions.AUDIENCE,
-            //            ValidateLifetime = true,
-
-            //            IssuerSigningKey = AuthOptions.GetSymmetricSecurityKey(),
-            //            ValidateIssuerSigningKey = true
-            //        };
-            //    });
 
             services.AddControllers();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
